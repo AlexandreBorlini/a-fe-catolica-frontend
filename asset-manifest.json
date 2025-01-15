@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/a-fe-catolica/static/css/main.f4dfbf59.css",
+    "main.js": "/a-fe-catolica/static/js/main.4dfaf0cf.js",
+    "static/js/453.fa3d3aa1.chunk.js": "/a-fe-catolica/static/js/453.fa3d3aa1.chunk.js",
+    "static/media/icon-x.png": "/a-fe-catolica/static/media/icon-x.294cfde92b1b07569545.png",
+    "static/media/icon-info.png": "/a-fe-catolica/static/media/icon-info.cfc11d0e9deefb0d80fc.png",
+    "index.html": "/a-fe-catolica/index.html",
+    "main.f4dfbf59.css.map": "/a-fe-catolica/static/css/main.f4dfbf59.css.map",
+    "main.4dfaf0cf.js.map": "/a-fe-catolica/static/js/main.4dfaf0cf.js.map",
+    "453.fa3d3aa1.chunk.js.map": "/a-fe-catolica/static/js/453.fa3d3aa1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f4dfbf59.css",
+    "static/js/main.4dfaf0cf.js"
+  ]
+}
