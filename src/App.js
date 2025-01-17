@@ -16,10 +16,10 @@ import InfosPage from './pages/infos/InfosPage';
 function App() {
 
   const BASE_URL            = "/a-fe-catolica-frontend";
-  const ASSUNTOS_ROUTE      = BASE_URL + "/assuntos";
-  const CATECISMO_ANO_ROUTE = BASE_URL + "/catecismo-ano";
-  const INFOS_ROUTE         = BASE_URL + "/infos";
-  const ASSUNTO_ROUTE       = BASE_URL + "/assunto";
+  const ASSUNTOS_ROUTE      = "/assuntos";
+  const CATECISMO_ANO_ROUTE = "/catecismo-ano";
+  const INFOS_ROUTE         = "/infos";
+  const ASSUNTO_ROUTE       = "/assunto";
 
   const [expanded, setExpanded] = useState(true);
   const [actualRoute, setActualRoute] = useState("/");
@@ -27,7 +27,7 @@ function App() {
   return (
 
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename={BASE_URL}>
       <SystemProvider>
         <Banner setExpanded={setExpanded} />
         <Sidebar expanded={expanded} setExpanded={setExpanded} setActualRoute={setActualRoute}> 
