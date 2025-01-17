@@ -7,7 +7,6 @@ export const SystemProvider = ({ children }) => {
     const [subject, setSubject] = useState('');
     const [loading, setLoading] = useState('');
     const [error, setError] = useState(false);
-    const errorMessage = "Houve um erro ao carregar informações";
     const [catechismDay, setCatechismDay] = useState('');
 
     const contextObj = {

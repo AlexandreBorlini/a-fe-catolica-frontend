@@ -3,11 +3,11 @@ import CatechismIcon from './components/icon/CatechismIcon';
 import SubjectIcon from './components/icon/SubjectIcon';
 import SidebarItem from './components/sidebar-item/SidebarItem';
 import Sidebar from './components/sidebar/Sidebar'
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import Banner from './components/banner/Banner';
 import ContactIcon from './components/icon/ContactIcon';
 import SubjectListPage from './pages/subject-list/SubjectListPage';
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import SubjectContentPage from './pages/subject-content/SubjectContentPage';
 import { SystemProvider, SystemContext } from './providers/ContextProvider';
 import DailyCatechismPage from './pages/daily-catechism/DailyCatechismPage';
@@ -29,7 +29,7 @@ function App() {
       <BrowserRouter>
       <SystemProvider>
         <Banner setExpanded={setExpanded} />
-        <Sidebar expanded={expanded} setExpanded={setExpanded}> 
+        <Sidebar expanded={expanded} setExpanded={setExpanded} setActualRoute={setActualRoute}> 
           
           <SidebarItem text="Assuntos" 
               icon={<SubjectIcon />} 
@@ -50,7 +50,7 @@ function App() {
       
         <div>
           <Routes>
-            <Route path="/" />
+            <Route path="/"                   element={<SubjectListPage    /> } />
             <Route path={ASSUNTOS_ROUTE}      element={<SubjectListPage    /> } />
             <Route path={CATECISMO_ANO_ROUTE} element={<DailyCatechismPage /> } />
             <Route path={INFOS_ROUTE}         element={<InfosPage          /> } />

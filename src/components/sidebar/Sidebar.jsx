@@ -1,6 +1,14 @@
+import { useLocation } from "react-router-dom";
 import CloseIcon from "../icon/CloseIcon";
+import { useEffect } from "react";
 
-function Sidebar({children, expanded, setExpanded}) {
+function Sidebar({children, expanded, setExpanded, setActualRoute}) {
+
+  const actualLocation = useLocation().pathname;
+  
+    useEffect(() => {
+        setActualRoute(actualLocation);
+    }, []);
 
     return (
         <aside className={`h-screen overflow-hidden bg-back-theme transition-all duration-300 w-64 lg:w-[16%]  z-50 fixed top-0 left-0 

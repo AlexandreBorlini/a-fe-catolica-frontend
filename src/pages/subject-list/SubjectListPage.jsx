@@ -14,6 +14,7 @@ function SubjectListPage() {
 
     useEffect(() => {
         setError(false);
+        setLoading(true);
 
         fetch('http://localhost:8020/subjects')
             .then((response) => { setLoading(false); return response.json(); })
