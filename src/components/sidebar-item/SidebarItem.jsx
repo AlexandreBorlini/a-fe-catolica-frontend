@@ -7,7 +7,10 @@ function SidebarItem({icon, text, actualRoute, destination, setActualRoute}) {
     const {setSubject } = useContext(SystemContext);
     
     return (
-        <Link to={destination} onClick={()=> {setActualRoute(destination); setSubject(null);}}>
+        <Link to={destination} onClick={()=> {
+                setActualRoute(destination == "/" ? "assuntos" : destination); 
+                setSubject(null);
+            }}>
             <li className={` 
                 relative flex items-center py-3 px-3
                 font-medium cursor-pointer

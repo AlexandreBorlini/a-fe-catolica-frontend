@@ -51,12 +51,12 @@ function App() {
       
         <div>
           <Routes>
-            <Route path={BASE_URL}            element={<SubjectListPage         /> } />
+            <Route path="/"                   element={<SubjectListPage         /> } />
             <Route path={ASSUNTOS_ROUTE}      element={<SubjectListPage         /> } />
             <Route path={CATECISMO_ANO_ROUTE} element={<DailyCatechismPage      /> } />
             <Route path={INFOS_ROUTE}         element={<InfosPage               /> } />
             <Route path={ASSUNTO_ROUTE}       element={<SubjectContentPage      /> } />
-            <Route path="*"                   element={<Navigate to ={BASE_URL} /> } />
+            <Route path="*"                   element={<Navigate to ="/" /> } />
           </Routes>
         </div>
       </SystemProvider>
