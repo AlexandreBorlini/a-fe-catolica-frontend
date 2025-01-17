@@ -15,10 +15,11 @@ import InfosPage from './pages/infos/InfosPage';
 
 function App() {
 
-  const ASSUNTOS_ROUTE      = "/assuntos"
-  const CATECISMO_ANO_ROUTE = "/catecismo-ano"
-  const INFOS_ROUTE         = "/infos"
-  const ASSUNTO_ROUTE       = "/assunto"
+  const BASE_URL            = "/a-fe-catolica-frontend";
+  const ASSUNTOS_ROUTE      = BASE_URL + "/assuntos";
+  const CATECISMO_ANO_ROUTE = BASE_URL + "/catecismo-ano";
+  const INFOS_ROUTE         = BASE_URL + "/infos";
+  const ASSUNTO_ROUTE       = BASE_URL + "/assunto";
 
   const [expanded, setExpanded] = useState(true);
   const [actualRoute, setActualRoute] = useState("/");
@@ -50,12 +51,12 @@ function App() {
       
         <div>
           <Routes>
-            <Route path="/"                   element={<SubjectListPage    /> } />
-            <Route path={ASSUNTOS_ROUTE}      element={<SubjectListPage    /> } />
-            <Route path={CATECISMO_ANO_ROUTE} element={<DailyCatechismPage /> } />
-            <Route path={INFOS_ROUTE}         element={<InfosPage          /> } />
-            <Route path={ASSUNTO_ROUTE}       element={<SubjectContentPage /> } />
-            <Route path="*"                   element={<Navigate to ="/"   /> } />
+            <Route path={BASE_URL}            element={<SubjectListPage         /> } />
+            <Route path={ASSUNTOS_ROUTE}      element={<SubjectListPage         /> } />
+            <Route path={CATECISMO_ANO_ROUTE} element={<DailyCatechismPage      /> } />
+            <Route path={INFOS_ROUTE}         element={<InfosPage               /> } />
+            <Route path={ASSUNTO_ROUTE}       element={<SubjectContentPage      /> } />
+            <Route path="*"                   element={<Navigate to ={BASE_URL} /> } />
           </Routes>
         </div>
       </SystemProvider>
