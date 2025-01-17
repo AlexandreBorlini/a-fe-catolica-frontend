@@ -56,7 +56,7 @@ function App() {
             <Route path={CATECISMO_ANO_ROUTE} element={<DailyCatechismPage      /> } />
             <Route path={INFOS_ROUTE}         element={<InfosPage               /> } />
             <Route path={ASSUNTO_ROUTE}       element={<SubjectContentPage      /> } />
-            <Route path="*"                   element={<Navigate to ="/" /> } />
+            <Route path="*"                   element={<Navigate to ="/"        /> } />
           </Routes>
         </div>
       </SystemProvider>
