@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/a-fe-catolica-frontend/static/css/main.f4dfbf59.css",
-    "main.js": "/a-fe-catolica-frontend/static/js/main.14258901.js",
+    "main.js": "/a-fe-catolica-frontend/static/js/main.e84dfde1.js",
     "static/js/453.fa3d3aa1.chunk.js": "/a-fe-catolica-frontend/static/js/453.fa3d3aa1.chunk.js",
     "static/media/icon-x.png": "/a-fe-catolica-frontend/static/media/icon-x.294cfde92b1b07569545.png",
     "static/media/icon-info.png": "/a-fe-catolica-frontend/static/media/icon-info.cfc11d0e9deefb0d80fc.png",
     "index.html": "/a-fe-catolica-frontend/index.html",
     "main.f4dfbf59.css.map": "/a-fe-catolica-frontend/static/css/main.f4dfbf59.css.map",
-    "main.14258901.js.map": "/a-fe-catolica-frontend/static/js/main.14258901.js.map",
+    "main.e84dfde1.js.map": "/a-fe-catolica-frontend/static/js/main.e84dfde1.js.map",
     "453.fa3d3aa1.chunk.js.map": "/a-fe-catolica-frontend/static/js/453.fa3d3aa1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f4dfbf59.css",
-    "static/js/main.14258901.js"
+    "static/js/main.e84dfde1.js"
   ]
 }
