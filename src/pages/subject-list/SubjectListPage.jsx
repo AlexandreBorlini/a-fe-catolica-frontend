@@ -16,7 +16,7 @@ function SubjectListPage() {
         setError(false);
         setLoading(true);
 
-        fetch('http://localhost:8020/subjects')
+        fetch('http://3.80.111.110/subjects')
             .then((response) => { setLoading(false); return response.json(); })
             .then((data) => {
                 if(data) {

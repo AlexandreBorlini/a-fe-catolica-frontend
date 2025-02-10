@@ -24,7 +24,7 @@ function DailyCatechismPage() {
             catDayUrl = catechismDay;
         }
 
-        fetch('http://localhost:8020/dailycatechism/' + catDayUrl)
+        fetch('http://3.80.111.110/dailycatechism/' + catDayUrl)
             .then((response) => { setLoading(false); return response.json(); })
             .then((data) => { 
                 setCatParagraphs(data);

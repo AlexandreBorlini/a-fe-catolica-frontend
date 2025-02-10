@@ -9,7 +9,7 @@ function SubjectCard({subject}) {
     const loadSubject = () => {
         setSubject(subject);
         setLoading(true);
-        fetch('http://localhost:8020/subjects/' + subject.id)
+        fetch('http://3.80.111.110/subjects/' + subject.id)
             .then((response) => { return response.json(); })
             .then((data) => {
                 setSubject(data);

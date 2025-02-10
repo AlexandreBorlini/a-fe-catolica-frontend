@@ -7,7 +7,7 @@ import { useState, useContext, useEffect } from 'react';
 import Banner from './components/banner/Banner';
 import ContactIcon from './components/icon/ContactIcon';
 import SubjectListPage from './pages/subject-list/SubjectListPage';
-import { BrowserRouter, Route, Routes, Navigate, useLocation } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate, useLocation, HashRouter } from 'react-router-dom';
 import SubjectContentPage from './pages/subject-content/SubjectContentPage';
 import { SystemProvider, SystemContext } from './providers/ContextProvider';
 import DailyCatechismPage from './pages/daily-catechism/DailyCatechismPage';
@@ -27,7 +27,7 @@ function App() {
   return (
 
     <div>
-      <BrowserRouter basename={BASE_URL}>
+      <HashRouter>
       <SystemProvider>
         <Banner setExpanded={setExpanded} />
         <Sidebar expanded={expanded} setExpanded={setExpanded} setActualRoute={setActualRoute}> 
@@ -49,18 +49,16 @@ function App() {
               setActualRoute={setActualRoute} actualRoute={actualRoute}/>
         </Sidebar>
       
-        <div>
-          <Routes>
-            <Route path="/"                   element={<SubjectListPage         /> } />
+        <Routes>
             <Route path={ASSUNTOS_ROUTE}      element={<SubjectListPage         /> } />
             <Route path={CATECISMO_ANO_ROUTE} element={<DailyCatechismPage      /> } />
             <Route path={INFOS_ROUTE}         element={<InfosPage               /> } />
             <Route path={ASSUNTO_ROUTE}       element={<SubjectContentPage      /> } />
+            <Route path="/"                   element={<SubjectListPage         /> } />
             <Route path="*"                   element={<Navigate to ="/"        /> } />
           </Routes>
-        </div>
       </SystemProvider>
-      </BrowserRouter>
+      </HashRouter>
     </div>
     
   );
