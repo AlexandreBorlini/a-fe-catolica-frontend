@@ -7,7 +7,7 @@ import { useState, useContext, useEffect } from 'react';
 import Banner from './components/banner/Banner';
 import ContactIcon from './components/icon/ContactIcon';
 import SubjectListPage from './pages/subject-list/SubjectListPage';
-import { BrowserRouter, Route, Routes, Navigate, useLocation, HashRouter } from 'react-router-dom';
+import { Route, Routes, Navigate, HashRouter } from 'react-router-dom';
 import SubjectContentPage from './pages/subject-content/SubjectContentPage';
 import { SystemProvider, SystemContext } from './providers/ContextProvider';
 import DailyCatechismPage from './pages/daily-catechism/DailyCatechismPage';
