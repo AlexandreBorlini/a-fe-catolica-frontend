@@ -15,7 +15,6 @@ import InfosPage from './pages/infos/InfosPage';
 
 function App() {
 
-  const BASE_URL            = "/a-fe-catolica-frontend";
   const ASSUNTOS_ROUTE      = "/assuntos";
   const CATECISMO_ANO_ROUTE = "/catecismo-ano";
   const INFOS_ROUTE         = "/infos";

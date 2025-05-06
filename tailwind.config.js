@@ -10,7 +10,7 @@ module.exports = {
         'back-theme':'#F4F4EC',
         'highlight-from-theme':'#EFEFCD',
         'highlight-to-theme':'#F4F4EC',
-        'selected-from-theme': '#E7E7AD',
+        'selected-from-theme': '#e3e3a8',
         'selected-to-theme': '#EFEFCD',
         'hover-border-theme': '#A3A31A'
       },

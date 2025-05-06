@@ -4,6 +4,7 @@ import { SystemContext } from "../../providers/ContextProvider";
 import SubjectTitle from "../../components/subject-title/SubjectTitle";
 import QuestionSession from "../../components/question-session/QuestionSession";
 import ErrorWrap from "../../components/info-wrap/InfoWrap";
+import SuperQuestionSession from "../../components/super-question/SuperQuestionSession";
 
 function SubjectContentPage() {
 
@@ -20,6 +21,10 @@ function SubjectContentPage() {
 
                     {subject.questions?.map((question) => (
                         <QuestionSession question={question}/>
+                    ))}
+
+                    {subject.superQuestions?.map((sq) => (
+                        <SuperQuestionSession superQuestion={sq}/>
                     ))}
                 </div>
             </ErrorWrap>

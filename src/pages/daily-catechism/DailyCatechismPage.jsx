@@ -1,5 +1,6 @@
 import Body from "../../components/body/Body";
-import ErrorMessage from "../../components/info-messages/ErrorMessage";
+import LeftArrowIcon from "../../components/icon/icon-left-arrow";
+import RightArrowIcon from "../../components/icon/RightArrowIcon";
 import ErrorWrap from "../../components/info-wrap/InfoWrap";
 import QuestionReference from "../../components/question-reference/QuestionReference";
 import SearchField from "../../components/search-field/SearchField";
@@ -24,7 +25,7 @@ function DailyCatechismPage() {
             catDayUrl = catechismDay;
         }
 
-        fetch('http://3.80.111.110/dailycatechism/' + catDayUrl)
+        fetch('http://localhost:8020/dailycatechism/' + catDayUrl)
             .then((response) => { setLoading(false); return response.json(); })
             .then((data) => { 
                 setCatParagraphs(data);
@@ -39,12 +40,24 @@ function DailyCatechismPage() {
 
     return (
         <div>
-            <SearchField  
-                searchFunction={loadDailyCatechism} 
-                searchValue={catechismDay} 
-                setSearchValue={setCatechismDay}
-                type={"number"}
-                label={"N° Dia"} />
+            <div className="w-full flex justify-center">
+                <div className="flex-1">
+                    <div className="w-8">
+                        <LeftArrowIcon />
+                    </div>
+                </div>
+                <div className="flex-1 flex justify-center">
+                    <SearchField  
+                        searchFunction={loadDailyCatechism} 
+                        searchValue={catechismDay} 
+                        setSearchValue={setCatechismDay}
+                        type={"number"}
+                        label={"N° Dia"} />
+                </div>
+                <div className="w-3 flex-1">
+                    <RightArrowIcon />
+                </div>
+            </div>
             <Body>
                 <ErrorWrap>
                     {catParagraphs?.map((catParagraphs) => (

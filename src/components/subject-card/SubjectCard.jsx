@@ -9,17 +9,20 @@ function SubjectCard({subject}) {
     const loadSubject = () => {
         setSubject(subject);
         setLoading(true);
-        fetch('http://3.80.111.110/subjects/' + subject.id)
+        fetch('http://localhost:8020/subjects/' + subject.id)
             .then((response) => { return response.json(); })
             .then((data) => {
+                console.log(data);
                 setSubject(data);
+                setLoading(false);
             }).catch(rejected => {
                 setError(true);
+                setLoading(false);
             });
     };
 
     return (
-        <div className="w-40
+        <div className="w-[46%]
                         md:w-[30%] ml-[2.5%] 
                         mb-2 border bg-white hover:bg-highlight-from-theme border-slate-400 hover:border-hover-border-theme cursor-pointer" 
                         onClick={loadSubject}>

@@ -7,12 +7,12 @@ function QuestionReference({reference}) {
             </span>
 
             {reference.textSources ? (
-                <span className="text-xs pt-1 block break-words flex justify-end">
+                <div className="text-xs pt-3 block break-words whitespace-pre-wrap flex text-stone-500">
                     {reference.textSources}
-                </span>
+                </div>
             ) : <div className="pb-2" />}
 
-            <span className="text-xs flex font-bold text-stone-400 ">
+            <span className="text-xs flex font-bold text-stone-400 justify-end">
                 {reference.source}
             </span>
         </div>
